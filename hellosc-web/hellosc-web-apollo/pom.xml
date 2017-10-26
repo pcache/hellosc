@@ -9,12 +9,20 @@
 		<version>0.0.1</version>
 	</parent>
 	<artifactId>hellosc-web-apollo</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>hellosc-web-apollo</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
-        <skip_maven_deploy>true</skip_maven_deploy>
-    </properties>
-	
+		<skip_maven_deploy>true</skip_maven_deploy>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.diyself</groupId>
+			<artifactId>hellosc-api</artifactId>
+			<version>0.0.1.1</version>
+		</dependency>
+	</dependencies>
+
 </project>

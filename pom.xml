@@ -38,7 +38,9 @@
 		<springfox-swagger>2.2.2</springfox-swagger>
 		<dubbo.version>2.5.5</dubbo.version>
 		<zookeeper_version>3.4.9</zookeeper_version>
-        <zkclient_version>0.1</zkclient_version>
+		<zkclient_version>0.1</zkclient_version>
+		<spring_mybatis_version>1.1.1</spring_mybatis_version>
+		<alibaba_fastjson>1.2.38</alibaba_fastjson>
 		<!-- Build args <argline>-server -Xms64m -Xmx256m -XX:PermSize=64m -XX:MaxPermSize=128m 
 			-Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true </argline> -->
 		<skip_maven_deploy>false</skip_maven_deploy>
@@ -83,8 +85,30 @@
 				<artifactId>zkclient</artifactId>
 				<version>${zkclient_version}</version>
 			</dependency>
+
+			<!-- spring_mybatis -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${spring_mybatis_version}</version>
+			</dependency>
+
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${alibaba_fastjson}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
+	<distributionManagement>  
+        <repository>  
+            <id>hellosc</id>  
+            <name>hellosc</name>  
+            <url>http://115.159.111.82:8081/repository/hellosc/</url>  
+        </repository>  
+    </distributionManagement> 
 
 	<build>
 		<plugins>
